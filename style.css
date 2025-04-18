@@ -6,10 +6,11 @@
 }
 
 /* Page Layout */
-.body, .page {
-  background: linear-gradient(to bottom, #dbeafe, #f0fdf4);
+.body,
+.page {
+  background: #000000;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,21 +26,21 @@
 
 .header__title {
   font-size: 2rem;
-  color: #2563eb;
+  color: #a78bfa; /* Soft lavender */
 }
 
 .header__subtitle {
-  color: #6b7280;
+  color: #9ca3af; /* Cool gray */
 }
 
 /* Main container */
 .main {
   width: 100%;
   max-width: 500px;
-  background-color: #ffffffcc;
+  background-color: #1e293b; /* Slate */
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
   text-align: center;
 }
 
@@ -51,7 +52,7 @@
 .section__title {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
-  color: #10b981;
+  color: #34d399; /* Soft green */
 }
 
 /* Breathing circle */
@@ -59,7 +60,7 @@
   width: 100px;
   height: 100px;
   margin: 0 auto 1rem auto;
-  background-color: #bfdbfe;
+  background-color: #334155; /* Dimmed slate */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -70,51 +71,113 @@
 .breath-circle__text {
   font-weight: bold;
   font-size: 1rem;
+  color: #f9fafb;
 }
 
 /* Timer Buttons */
 .timer-controls__btn {
   margin: 0.3rem;
   padding: 0.5rem 1.2rem;
-  background-color: #3b82f6;
+  background-color: #6366f1; /* Indigo */
   color: white;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .timer-controls__btn:hover {
-  background-color: #2563eb;
+  background-color: #4f46e5;
 }
 
 /* Tip Block */
 .daily-tip {
-  background-color: #fef9c3;
+  background-color: #312e81; /* Midnight purple */
   padding: 1rem;
   font-style: italic;
   border-radius: 0.5rem;
-  color: #4b5563;
+  color: #e0e7ff;
 }
 
 /* Journal */
 .journal__input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #4b5563;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
+  background-color: #0f172a;
+  color: #f1f5f9;
 }
 
 .journal__save {
-  background-color: #10b981;
+  background-color: #14b8a6;
   color: white;
   border: none;
   padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .journal__save:hover {
+  background-color: #0d9488;
+}
+
+/* Wrapper for message + buttons */
+.journal__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Buttons side by side and centered */
+.journal__button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button-container {
+ position: relative;
+}
+
+/* Optional: style for message above buttons */
+.journal__message {
+  position: absolute;
+  font-size: 0.8rem;
+  color: #34d399;
+  background-color: #0f172a;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.journal__message--save {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.journal__message--clear {
+    left: 100%;
+    margin-left: 10px;
+}
+
+.journal__reset {
+  background-color: #10b981; /* Same as Save button */
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.journal__reset:hover {
   background-color: #059669;
 }
 
@@ -122,27 +185,28 @@
 .soundboard__btn {
   margin: 0.3rem;
   padding: 0.5rem 1.2rem;
-  background-color: #a78bfa;
+  background-color: #7c3aed;
   color: white;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .soundboard__btn:hover {
-  background-color: #8b5cf6;
+  background-color: #6d28d9;
 }
 
 /* Footer */
 .footer {
   width: 100%;
   max-width: 500px;
+  padding: 0;
   margin-top: 2rem;
   text-align: left;
 }
 
 .footer__text {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
-

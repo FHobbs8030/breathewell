@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BreatheWell</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="page">
-    <header class="header">
-      <h1 class="header__title">BreatheWell</h1>
-      <p class="header__subtitle">Your Daily Pause. Your Pocket Sanctuary.</p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BreatheWell</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">BreatheWell</h1>
+        <p class="header__subtitle">Your Daily Pause. Your Pocket Sanctuary.</p>
+      </header>
 
-    <main class="main">
-      <!-- Guided Breathing Timer -->
-      <section class="section section--breathing">
-        <h2 class="section__title">Guided Breathing</h2>
-        <div class="breath-circle">
-          <p class="breath-circle__text">Inhale</p>
-        </div>
-        <div class="timer-controls">
-          <button class="timer-controls__btn" data-duration="1">1 Min</button>
-          <button class="timer-controls__btn" data-duration="3">3 Min</button>
-          <button class="timer-controls__btn" data-duration="5">5 Min</button>
-        </div>
-      </section>
+      <main class="main">
+        <!-- Guided Breathing Timer -->
+        <section class="section section--breathing">
+          <h2 class="section__title">Guided Breathing</h2>
+          <div class="breath-circle">
+            <p class="breath-circle__text">Inhale</p>
+          </div>
+          <div class="timer-controls">
+            <button class="timer-controls__btn" data-duration="1">1 Min</button>
+            <button class="timer-controls__btn" data-duration="3">3 Min</button>
+            <button class="timer-controls__btn" data-duration="5">5 Min</button>
+          </div>
+        </section>
 
-      <!-- Daily Mindfulness Tip -->
-      <section class="section section--tip">
-        <h2 class="section__title">Mindfulness Tip</h2>
-        <blockquote class="daily-tip">"Breathe in peace. Breathe out tension."</blockquote>
-      </section>
+        <!-- Gratitude Journal -->
+        <section class="section section--journal">
+          <h2 class="section__title">Gratitude Journal</h2>
+          <textarea
+            class="journal__input"
+            id="gratitude-input"
+            name="gratitude"
+            rows="4"
+            placeholder="Write 3 things you're grateful for today..."
+          >
+          </textarea>
 
-      <!-- Gratitude Journal -->
-      <section class="section section--journal">
-        <h2 class="section__title">Gratitude Journal</h2>
-        <textarea class="journal__input" rows="4" placeholder="Write 3 things you're grateful for today..."></textarea>
-        <button class="journal__save">Save</button>
-      </section>
+          <div class="journal__controls">
+            <div class="journal__button-group">
+              <div class="button-container">
+                <div
+                  id="save-message"
+                  class="journal__message journal__message--save"
+                ></div>
+                <button class="journal__save" id="save-entry">Save</button>
+              </div>
+              <div class="button-container">
+                <div
+                  id="clear-message"
+                  class="journal__message journal__message--clear"
+                ></div>
+                <button class="journal__reset" id="reset-entry">Clear</button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <!-- Calming Soundboard -->
-      <section class="section section--soundboard">
-        <h2 class="section__title">Calming Sounds</h2>
-        <div class="soundboard">
-          <button class="soundboard__btn" data-sound="rain">Rain</button>
-          <button class="soundboard__btn" data-sound="ocean">Ocean</button>
-          <button class="soundboard__btn" data-sound="forest">Forest</button>
-          <button class="soundboard__btn" data-sound="white-noise">White Noise</button>
-        </div>
-      </section>
-    </main>
+        <!-- Calming Soundboard -->
+        <section class="section section--soundboard">
+          <h2 class="section__title">Calming Sounds</h2>
+          <div class="soundboard">
+            <button class="soundboard__btn" data-sound="rain">Rain</button>
+            <button class="soundboard__btn" data-sound="ocean">Ocean</button>
+            <button class="soundboard__btn" data-sound="forest">Forest</button>
+            <button class="soundboard__btn" data-sound="white-noise">
+              White Noise
+            </button>
+          </div>
+        </section>
+      </main>
 
-    <footer class="footer">
-      <p class="footer__text">Team: Calm Coders &copy; 2025</p>
-    </footer>
-  </div>
+      <footer class="footer">
+        <p class="footer__text">Team: Calm Coders &copy; 2025</p>
+      </footer>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
