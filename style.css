@@ -1,0 +1,148 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Layout */
+.body, .page {
+  background: linear-gradient(to bottom, #dbeafe, #f0fdf4);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header__title {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.header__subtitle {
+  color: #6b7280;
+}
+
+/* Main container */
+.main {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffffcc;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Section */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #10b981;
+}
+
+/* Breathing circle */
+.breath-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem auto;
+  background-color: #bfdbfe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 4s ease-in-out;
+}
+
+.breath-circle__text {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Timer Buttons */
+.timer-controls__btn {
+  margin: 0.3rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.timer-controls__btn:hover {
+  background-color: #2563eb;
+}
+
+/* Tip Block */
+.daily-tip {
+  background-color: #fef9c3;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 0.5rem;
+  color: #4b5563;
+}
+
+/* Journal */
+.journal__input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.journal__save {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.journal__save:hover {
+  background-color: #059669;
+}
+
+/* Soundboard */
+.soundboard__btn {
+  margin: 0.3rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #a78bfa;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.soundboard__btn:hover {
+  background-color: #8b5cf6;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.footer__text {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
