@@ -140,7 +140,7 @@
 }
 
 .button-container {
- position: relative;
+  position: relative;
 }
 
 /* Optional: style for message above buttons */
@@ -158,13 +158,13 @@
 }
 
 .journal__message--save {
-    right: 100%;
-    margin-right: 10px;
+  right: 100%;
+  margin-right: 10px;
 }
 
 .journal__message--clear {
-    left: 100%;
-    margin-left: 10px;
+  left: 100%;
+  margin-left: 10px;
 }
 
 .journal__reset {
@@ -195,6 +195,61 @@
 
 .soundboard__btn:hover {
   background-color: #6d28d9;
+}
+
+/* Video Popup Styles */
+.video-popup {
+ display: none; /* default state */
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.8);
+ z-index: 1000;
+ justify-content: center;
+ align-items: center;
+}
+
+.video-popup__content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.video-popup__close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-popup__video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-popup__video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer */

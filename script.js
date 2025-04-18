@@ -85,3 +85,73 @@ resetBtn.addEventListener("click", () => {
     clearMessage.style.opacity = "0";
   }, 3000);
 });
+
+const rainButton = document.querySelector('[data-sound="rain"]');
+const videoPopup = document.getElementById("rainPopup");
+const closePopupButton = document.getElementById("closePopup");
+
+rainButton.addEventListener("click", () => {
+  openPopup();
+});
+
+closePopupButton.addEventListener("click", closePopup);
+
+// Close when clicking outside the video
+videoPopup.addEventListener("click", (event) => {
+  if (event.target === videoPopup) {
+    closePopup();
+  }
+});
+
+// Also handle ESC key to exit
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closePopup();
+  }
+});
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("rainVideo", {
+    events: {
+      onReady: onPlayerReady,
+    },
+  });
+}
+
+function onPlayerReady(event) {
+  // Player is ready
+}
+
+// Modify your existing openPopup function
+function openPopup() {
+  document.getElementById("rainPopup").style.display = "flex";
+  if (player) {
+    player.playVideo();
+    const iframe = document.getElementById("rainVideo");
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    }
+  }
+}
+
+// Modify your existing closePopup function
+function closePopup() {
+  document.getElementById("rainPopup").style.display = "none";
+  if (player) {
+    player.stopVideo();
+    // Exit fullscreen
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    }
+  }
+}

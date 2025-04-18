@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BreatheWell</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.youtube.com/iframe_api"></script>
   </head>
   <body>
     <div class="page">
@@ -76,6 +77,24 @@
       <footer class="footer">
         <p class="footer__text">Team: Calm Coders &copy; 2025</p>
       </footer>
+    </div>
+
+    <div class="video-popup" id="rainPopup">
+      <div class="video-popup__content">
+        <button class="video-popup__close" id="closePopup">&times;</button>
+        <div class="video-popup__video-container">
+          <iframe
+            id="rainVideo"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/mPZkdNFkNps?enablejsapi=1"
+            title="Rain Sounds"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
